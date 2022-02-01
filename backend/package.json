@@ -1,0 +1,14 @@
+{
+  "name": "bitheke-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DeivydHXS/bitheke-backend.git",
+  "author": "DeivydHXS <deivydhomam1@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "roda": "tsc src/index"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
