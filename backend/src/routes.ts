@@ -1,12 +1,14 @@
 import { Router } from "express";
-import UserController from "./controllers/UserController";
+import { CreateCategoryController } from "./controllers/CreateCategoryController";
+import { DeleteCategoryController } from "./controllers/DeleteCategoryController";
+import { GetAllCategoriesController } from "./controllers/GetAllCategoriesController";
+import { UpdateCategoryController } from "./controllers/UpdateCategoryController";
 
 const routes = Router();
 
-routes.get('/', (req, res) => {
-    return res.send('Hello');
-});
+routes.post('/categories', new CreateCategoryController().handle);
+routes.get('/categories', new GetAllCategoriesController().handle);
+routes.delete('/categories/:id', new DeleteCategoryController().handle);
+routes.put('/categories/:id', new UpdateCategoryController().handle);
 
-routes.get('/users', UserController.index);
-
-export default routes;
+export { routes };
