@@ -21,6 +21,9 @@ export class Book {
     @JoinColumn({ name: "category_id" })
     category_id: Category;
 
+    @Column()
+    shelf: string;
+
     @CreateDateColumn()
     created_at: Date;
 

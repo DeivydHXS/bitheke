@@ -30,6 +30,10 @@ export class CreateBook1643821085944 implements MigrationInterface {
                         type: "uuid"
                     },
                     {
+                        name: "shelf",
+                        type: "varchar"
+                    },
+                    {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()"
