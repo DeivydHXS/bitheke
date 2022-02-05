@@ -1,4 +1,4 @@
-import { Header } from "./components/Header/Header"
+import { Header } from "./shared/components/Header/Header"
 import { AppRoutes } from "./Routes"
 
 function App() {
