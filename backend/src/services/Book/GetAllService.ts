@@ -5,7 +5,9 @@ export class GetAllBooksService {
     async execute() {
         const repo = getRepository(Book);
 
-        const books = await repo.find();
+        const books = await repo.find({
+            relations: ['category']
+        });
 
         return books;
     }

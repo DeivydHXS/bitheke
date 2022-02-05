@@ -17,9 +17,12 @@ export class Book {
     @Column()
     price: number;
 
+    @Column()
+    category_id: string;
+
     @ManyToOne(() => Category)
     @JoinColumn({ name: "category_id" })
-    category_id: Category;
+    category: Category;
 
     @Column()
     shelf: string;

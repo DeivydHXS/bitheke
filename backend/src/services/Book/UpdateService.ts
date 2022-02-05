@@ -7,7 +7,7 @@ type BookUpdateRequest = {
     title: string;
     description: string;
     price: number;
-    category_id: Category;
+    category_id: string;
     shelf: string;
 }
 
