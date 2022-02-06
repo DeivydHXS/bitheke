@@ -1,7 +1,10 @@
-import { AppBar, InputBase, SvgIcon, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, InputBase, SvgIcon, Toolbar, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
+import { useAppThemeContext } from "../../contexts";
 
 export function Header() {
+    const { toggleTheme } = useAppThemeContext();
+    
     return (
         <AppBar>
             <Toolbar>
@@ -12,6 +15,7 @@ export function Header() {
                 <div>
                     <InputBase placeholder="Searching a book..." />
                 </div>
+                <Button onClick={toggleTheme}>toggleTheme</Button>
             </Toolbar>
         </AppBar> 
     );
