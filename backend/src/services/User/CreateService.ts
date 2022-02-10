@@ -22,7 +22,7 @@ export class CreateUserService {
         const user = repo.create({
             name,
             email,
-            password,
+            password: passwordHash,
             cpf
         });
 
