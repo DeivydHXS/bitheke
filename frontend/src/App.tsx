@@ -1,4 +1,4 @@
-import { Header } from "./shared/components/Header/Header"
+import { Header } from "./shared/components/Header"
 import { AppRoutes } from "./Routes"
 import { AppThemeProvider } from "./shared/contexts";
 

@@ -1,6 +1,7 @@
-import { AppBar, Button, InputBase, SvgIcon, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, InputBase, Toolbar, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { useAppThemeContext } from "../../contexts";
+import { Link } from "react-router-dom";
 
 export function Header() {
     const { toggleTheme } = useAppThemeContext();
@@ -15,7 +16,10 @@ export function Header() {
                 <div>
                     <InputBase placeholder="Searching a book..." />
                 </div>
-                <Button onClick={toggleTheme}>toggleTheme</Button>
+                <Button onClick={toggleTheme} variant="contained">toggleTheme</Button>
+                <nav>
+                    <Link to="/books">Books</Link>
+                </nav>
             </Toolbar>
         </AppBar> 
     );

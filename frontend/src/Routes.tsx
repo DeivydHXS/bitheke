@@ -1,14 +1,16 @@
-import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
+import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { Books } from './pages/Books';
 
 export function AppRoutes() {
     return (
-        <Router>
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path='/books' element={<Books />} />
 
                 <Route path="*" element={ <Navigate to="/" /> } />
             </Routes>
-        </Router>
+        </BrowserRouter>
     )
 }
