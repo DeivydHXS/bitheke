@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { GetAllBooksService } from "../../services/Book/GetAllService";
+import { GetAllUsersService } from "../../services/User/GetAllService";
 
-export class GetAllBooksController {
+export class GetAllUsersController {
     async handle(request: Request, response: Response) {
-        const service = new GetAllBooksService();
+        const service = new GetAllUsersService();
 
         const result = await service.execute();
 

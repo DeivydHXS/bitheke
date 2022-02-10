@@ -1,3 +1,4 @@
+import './config/env';
 import express from 'express';
 import "./database";
 import { routes } from './routes';
