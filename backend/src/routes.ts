@@ -27,7 +27,7 @@ routes.post('/users', new CreateUserController().handle);
 routes.get('/users', new GetAllUsersController().handle);
 // routes.delete('/users/:id', new DeleteUserController().handle);
 // routes.put('/users/:id', new UpdateUserController().handle);
-routes.put('/session', new LoginController().handle);
+routes.post('/session', new LoginController().handle);
 
 
 export { routes };
