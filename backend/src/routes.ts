@@ -8,8 +8,10 @@ import { DeleteCategoryController } from "./controllers/Category/DeleteControlle
 import { GetAllCategoriesController } from "./controllers/Category/GetAllController";
 import { UpdateCategoryController } from "./controllers/Category/UpdateController";
 import { CreateUserController } from "./controllers/User/CreateController";
+import { DeleteUserController } from "./controllers/User/DeleteController";
 import { GetAllUsersController } from "./controllers/User/GetAllController";
 import { LoginController } from "./controllers/User/LoginController";
+import { UpdateUserController } from "./controllers/User/UpdateController";
 
 const routes = Router();
 
@@ -25,8 +27,8 @@ routes.put('/books/:id', new UpdateBookController().handle);
 
 routes.post('/users', new CreateUserController().handle);
 routes.get('/users', new GetAllUsersController().handle);
-// routes.delete('/users/:id', new DeleteUserController().handle);
-// routes.put('/users/:id', new UpdateUserController().handle);
+routes.delete('/users/:id', new DeleteUserController().handle);
+routes.put('/users/:id', new UpdateUserController().handle);
 routes.post('/session', new LoginController().handle);
 
 
