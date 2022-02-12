@@ -1,5 +1,5 @@
-import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
-import { Home } from "./pages/Home";
+import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom';
+import { Home } from './pages/Home';
 import { Books } from './pages/Books';
 
 export function AppRoutes() {
@@ -12,5 +12,5 @@ export function AppRoutes() {
                 <Route path="*" element={ <Navigate to="/" /> } />
             </Routes>
         </BrowserRouter>
-    )
+    );
 }

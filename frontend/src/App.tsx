@@ -1,12 +1,12 @@
-import { Header } from "./shared/components/Header"
-import { AppRoutes } from "./Routes"
-import { AppThemeProvider } from "./shared/contexts";
+import { Header } from './shared/components/Header';
+import { AppRoutes } from './Routes';
+import { AppThemeProvider } from './shared/contexts';
 
 
 function App() {
   return (
     <AppThemeProvider>
-      <Header />
+      {/* <Header /> */}
       <AppRoutes />
     </AppThemeProvider>
   );

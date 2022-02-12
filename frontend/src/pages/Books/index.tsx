@@ -1,9 +1,9 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
-import React, { useState } from 'react';
-import { Book } from '../../shared/components/Book';
+import { AppTable } from "../../shared/components/Table";
 
 export function Books() {
     return (
-        <h1>Books</h1>
+        <div>
+            <AppTable />
+        </div>
     );
 }

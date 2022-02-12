@@ -17,12 +17,12 @@ import { auth } from "./middlewares/auth";
 const routes = Router();
 
 routes.post('/categories', auth, new CreateCategoryController().handle);
-routes.get('/categories', auth, new GetAllCategoriesController().handle);
+routes.get('/categories', new GetAllCategoriesController().handle);
 routes.delete('/categories/:id', auth, new DeleteCategoryController().handle);
 routes.put('/categories/:id', auth, new UpdateCategoryController().handle);
 
 routes.post('/books', auth, new CreateBookController().handle);
-routes.get('/books', auth, new GetAllBooksController().handle);
+routes.get('/books', new GetAllBooksController().handle);
 routes.delete('/books/:id', auth, new DeleteBookController().handle);
 routes.put('/books/:id', auth, new UpdateBookController().handle);
 
