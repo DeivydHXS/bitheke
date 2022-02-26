@@ -1,12 +1,17 @@
+import styles from './styles.css';
+import React from 'react';
+import { Container, Title } from './styles';
 
-export function Home() {
-    return (
-        <div>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-        </div>
-    );
+interface indexProps {
+    
 }
+
+export const Home: React.FC<indexProps> = () => {
+    return (
+        <Container>
+            <Title>
+                BITHEKE
+            </Title>
+        </Container>
+    );
+};
