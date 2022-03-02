@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const Title = styled.p  `
     font-size: 16px;
     font-weight: bold;
+    color: white;
 `;
 
 export const List = styled.ul`
@@ -22,17 +23,19 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
+    margin: 16px 0px;
     float: left;
-    padding: 16px;
-    &:hover {
-        background-color: #fff;
-    }
 `;
 
 export const Link = styled.a`
     color: white;
     text-align: center;
     padding: 16px;
+    font-weight: bold;
+
     text-decoration: none;
-    
+    &:hover {
+        background-color: white;
+        color: black;
+    }
 `;
