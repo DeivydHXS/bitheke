@@ -1,17 +1,19 @@
-import styles from './styles.css';
 import React from 'react';
 import { Container, Title } from './styles';
+import { BooksTable } from './BooksTable';
 
-interface indexProps {
+interface ListBooksProps {
     
 }
 
-export const ListBooks: React.FC<indexProps> = () => {
+export const ListBooks: React.FC<ListBooksProps> = () => {
     return (
         <Container>
             <Title>
                 List Book
             </Title>
+
+            <BooksTable />
         </Container>
     );
 };

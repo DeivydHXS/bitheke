@@ -1,12 +1,11 @@
-import styles from './styles.css';
 import React from 'react';
 import { Container, Title } from './styles';
 
-interface indexProps {
+interface GetBookProps {
     
 }
 
-export const GetBook: React.FC<indexProps> = () => {
+export const GetBook: React.FC<GetBookProps> = () => {
     return (
         <Container>
             <Title>

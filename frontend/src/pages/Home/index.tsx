@@ -1,12 +1,11 @@
-import styles from './styles.css';
 import React from 'react';
 import { Container, Title } from './styles';
 
-interface indexProps {
+interface HomeProps {
     
 }
 
-export const Home: React.FC<indexProps> = () => {
+export const Home: React.FC<HomeProps> = () => {
     return (
         <Container>
             <Title>
