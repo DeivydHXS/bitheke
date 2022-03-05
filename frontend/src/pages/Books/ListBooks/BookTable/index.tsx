@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Table, Title } from './styles';
+import { Container, Table, Option } from './styles';
 import { listBooks } from '../../../../services/listBooks';
 import { BookInterface } from '../../../../interfaces';
 
-interface BooksTableProps {
+interface BookTableProps {
 
 }
 
-export const BooksTable: React.FC<BooksTableProps> = () => {
+export const BookTable: React.FC<BookTableProps> = () => {
     const [books, setBooks] = useState<BookInterface[]>();
 
     useEffect(() => {
@@ -18,18 +18,23 @@ export const BooksTable: React.FC<BooksTableProps> = () => {
 
     return (
         <Container>
-            <Title>Books Table</Title>
             <Table>
                 <tr>
                     <th>Title</th>
                     <th>Description</th>
                     <th>Category</th>
+                    <th>Options</th>
                 </tr>
                 {books?.map((book) => (
                     <tr>
                         <td>{book.title}</td>
                         <td>{book.description}</td>
                         <td>{book.category.name}</td>
+                        <td>
+                            <Option>Show</Option>
+                            <Option>Edit</Option>
+                            <Option>Delete</Option>
+                        </td>
                     </tr>
                 ))}
             </Table>

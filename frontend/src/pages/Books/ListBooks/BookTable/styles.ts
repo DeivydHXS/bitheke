@@ -4,22 +4,20 @@ export const Container = styled.div`
     
 `;
 
-export const Title = styled.h2`
-    
+export const Option = styled.button`
+
 `;
 
 export const Table = styled.table`
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
-  min-width: 400px;
-  text-align: left;
-
+  text-align: center;
 
   th {
     background-color: #009769;
     color: #fff;
-    padding: 10px;
+    padding: 10px 15px;
     font-weight: bold;
   }
 

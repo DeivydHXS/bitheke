@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Title } from './styles';
-import { BooksTable } from './BooksTable';
+import { BookTable } from './BookTable';
 
 interface ListBooksProps {
     
@@ -10,10 +10,10 @@ export const ListBooks: React.FC<ListBooksProps> = () => {
     return (
         <Container>
             <Title>
-                List Book
+                Book List
             </Title>
 
-            <BooksTable />
+            <BookTable />
         </Container>
     );
 };
