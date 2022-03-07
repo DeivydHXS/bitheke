@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Table, Option } from './styles';
+import { Container, Table, Option, AddBookButton } from './styles';
 import { listBooks } from '../../../../services/listBooks';
 import { BookInterface } from '../../../../interfaces';
+import { BsPlusLg, BsFillEyeFill, BsFillPencilFill, BsTrashFill } from "react-icons/bs";
 
 interface BookTableProps {
 
@@ -18,6 +19,10 @@ export const BookTable: React.FC<BookTableProps> = () => {
 
     return (
         <Container>
+            <AddBookButton>
+                <BsPlusLg />
+                <p>Add a new </p>
+            </AddBookButton>
             <Table>
                 <tr>
                     <th>Title</th>
@@ -31,9 +36,9 @@ export const BookTable: React.FC<BookTableProps> = () => {
                         <td>{book.description}</td>
                         <td>{book.category.name}</td>
                         <td>
-                            <Option>Show</Option>
-                            <Option>Edit</Option>
-                            <Option>Delete</Option>
+                            <Option><BsFillEyeFill /></Option>
+                            <Option><BsFillPencilFill /></Option>
+                            <Option><BsTrashFill /></Option>
                         </td>
                     </tr>
                 ))}
