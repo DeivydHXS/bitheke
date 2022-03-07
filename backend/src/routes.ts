@@ -23,6 +23,7 @@ routes.put('/categories/:id', auth, new UpdateCategoryController().handle);
 
 routes.post('/books', auth, new CreateBookController().handle);
 routes.get('/books', new GetAllBooksController().handle);
+routes.get('/books/:id', new GetAllBooksController().handle);
 routes.delete('/books/:id', auth, new DeleteBookController().handle);
 routes.put('/books/:id', auth, new UpdateBookController().handle);
 

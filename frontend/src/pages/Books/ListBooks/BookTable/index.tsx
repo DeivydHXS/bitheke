@@ -36,9 +36,9 @@ export const BookTable: React.FC<BookTableProps> = () => {
                         <td>{book.description}</td>
                         <td>{book.category.name}</td>
                         <td>
-                            <Option><BsFillEyeFill /></Option>
-                            <Option><BsFillPencilFill /></Option>
-                            <Option><BsTrashFill /></Option>
+                            <Option><a href={`/books/${book.id}`}><BsFillEyeFill /></a></Option>
+                            <Option><a href={`/books/${book.id}`}><BsFillPencilFill /></a></Option>
+                            <Option><a href={`/books/${book.id}`}><BsTrashFill /></a></Option>
                         </td>
                     </tr>
                 ))}
