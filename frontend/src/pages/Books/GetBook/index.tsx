@@ -9,21 +9,40 @@ interface GetBookProps {
 
 export const GetBook: React.FC<GetBookProps> = () => {
     const { id } = useParams();
-    const [book, setBook] = useState<BookInterface>();
+    const [book, setBook] = useState<BookInterface[]>([{
+        id: "",
+        title: "",
+        description: "",
+        price: 0,
+        category_id: "",
+        category: {
+            id: "",
+            name: "",
+            description: "",
+            created_at: new Date,
+        },
+        shelf: "",
+        created_at: new Date,
+    }]);
     
     useEffect(() => {
         getBook(id).then((response) => {
             setBook(response);
         });
     }, []);
+    
     return (
         <Container>
-            <Title>
-                {book?.title}
-            </Title>
-            <p>
-                {book?.description}
-            </p>
+            {book.map((bk) => (
+                <>
+                    <Title>
+                        {bk.title}
+                    </Title>
+                    <p>
+                        Description: {bk.description}
+                    </p>
+                </>    
+            ))}
         </Container>
     );
 };

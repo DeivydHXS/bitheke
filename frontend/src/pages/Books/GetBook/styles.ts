@@ -6,6 +6,6 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
 
 `;
