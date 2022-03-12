@@ -20,6 +20,10 @@ export const List = styled.ul`
     overflow: hidden;
     padding: 0px;
     margin: 0px;
+
+    @media (max-width: 800px) {
+        display: none;
+    }
 `;
 
 export const Item = styled.li`

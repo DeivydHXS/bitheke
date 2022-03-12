@@ -33,13 +33,13 @@ export const GetBook: React.FC<GetBookProps> = () => {
     
     return (
         <Container>
-            {book.map((bk) => (
+            {book.map((item) => (
                 <>
                     <Title>
-                        {bk.title}
+                        {item.title}
                     </Title>
                     <p>
-                        Description: {bk.description}
+                        {item.description}
                     </p>
                 </>    
             ))}
