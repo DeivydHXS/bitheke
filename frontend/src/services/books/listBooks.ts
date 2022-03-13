@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BookInterface } from "../interfaces";
+import { BookInterface } from "../../interfaces";
 
 export async function listBooks(): Promise<BookInterface[]> {
     const endpoint = 'http://localhost:3333/books';

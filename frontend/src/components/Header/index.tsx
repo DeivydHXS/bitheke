@@ -13,6 +13,7 @@ const Header: React.FC<HeaderProps> = () => {
                 <Item><Link href="/">Home</Link></Item>
                 <Item><Link href="/books">Books</Link></Item>
             </List>
+            
         </Container>
     );
 };

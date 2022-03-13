@@ -12,7 +12,7 @@ export const Home: React.FC<HomeProps> = () => {
                 BITHEKE
             </Title>
             <p>Welcome to Bitheke</p>
-            <p>a library system to get your favorites books!</p>
+            <p>a library system to get your favorites books on your hands!</p>
         </Container>
     );
 };

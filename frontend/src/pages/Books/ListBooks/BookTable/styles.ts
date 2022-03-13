@@ -1,22 +1,33 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const Option = styled.button`
+  border-radius: 16px;
+  border-style: solid;
 
+  & > a {
+    color: black;
+  }
 `;
 
 export const AddBookButton = styled.div`
-  background-color: #009769;
-  margin: auto;
-  padding: 5px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
+  margin: 16px;
+
+  & > a {
+    background-color: #009769;
+    border-radius: 16px;
+    padding: 16px;
+
+    text-decoration: none;
+    color: white;
+  }
 `;
 
 export const Table = styled.table`
@@ -37,4 +48,10 @@ export const Table = styled.table`
     padding: 10px;
   }
 
+`;
+
+export const OptionList = styled.td`
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
 `;

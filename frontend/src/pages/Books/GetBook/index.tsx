@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { BookInterface } from '../../../interfaces';
-import { getBook } from '../../../services/getBook';
+import { getBook } from '../../../services/books/getBook';
 import { Container, Title } from './styles';
 
 interface GetBookProps {
