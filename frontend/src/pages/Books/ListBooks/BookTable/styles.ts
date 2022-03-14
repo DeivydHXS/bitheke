@@ -38,13 +38,13 @@ export const Table = styled.table`
 
   th {
     background-color: #009769;
-    color: #f0f0fb;
+    color: white;
     padding: 10px 15px;
     font-weight: bold;
   }
 
   td {
-    background-color: #f0f0fb;
+    background-color: #f2f2f2;
     padding: 10px;
   }
 

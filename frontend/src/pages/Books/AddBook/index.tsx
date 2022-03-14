@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CategoryInterface } from '../../../interfaces';
 import { addBook } from '../../../services/books/addBook';
 import { listCategories } from '../../../services/categories/listCategories';
-import { Container, Title } from './styles';
+import { Container, Title, Form } from './styles';
 
 interface AddBookProps {
     
@@ -13,6 +13,7 @@ export const AddBook: React.FC<AddBookProps> = () => {
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
     const [shelf, setShelf] = useState('');
+    const [price, setPrice] = useState(0);
     const [categories, setCategories] = useState<CategoryInterface[]>();
 
     useEffect(() => {
@@ -21,48 +22,61 @@ export const AddBook: React.FC<AddBookProps> = () => {
         });
     }, []);
 
-    const handleSubmit = () => {
-        useEffect(() => {
-            addBook(title, description, category, shelf);
-        }, []);
-    }
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        addBook(title, description, category, shelf, price);
+    };
 
     return (
         <Container>
             <Title>Add Book</Title>
-            <form action="/books" method="get" onSubmit={handleSubmit}>
-                <label>Title
+            <Form onSubmit={handleSubmit}>
+                <div>
+                    <p>Title: </p>
                     <input 
                         type="text" 
                         name="title" 
                         onChange={(e) => {setTitle(e.target.value)}}
                     />
-                </label>
+                </div>
 
-                <label>Description
+                <div>
+                    <p>Description:</p> 
                     <textarea  
                         onChange={(e) => {setDescription(e.target.value)}}
                     />
-                </label>
+                </div>
 
-                <select value="Choose" onChange={(e) => {setCategory(e.target.value); console.log(category)}}>
-                    {categories?.map((c) => (
-                        <option value={c.id}>{c.name}</option>
-                    ))}
-                </select>
+                <div>
+                    <p>Category:</p> 
+                    <select onChange={(e) => {setCategory(e.target.value)}}>
+                        <option>Choose a category</option>
+                        {categories?.map((c) => (
+                            <option value={c.id}>{c.name}</option>
+                        ))}
+                    </select>
+                </div>
 
-                <label>Shelf
+                <div>
+                    <p>Price:</p>
+                    <input 
+                        type="number" 
+                        name="price" 
+                        onChange={(e) => {setPrice(parseInt(e.target.value))}}
+                    />
+                </div>
+
+                <div>
+                    <p>Shelf:</p> 
                     <input 
                         type="text" 
                         name="shelf" 
                         onChange={(e) => {setShelf(e.target.value)}}
                     />
-                </label>
-
-
+                </div>
 
                 <input type="submit" />
-            </form>
+            </Form>
         </Container>
     );
 };
