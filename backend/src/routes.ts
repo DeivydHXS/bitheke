@@ -2,6 +2,7 @@ import { Router } from "express";
 import { CreateBookController } from "./controllers/Book/CreateController";
 import { DeleteBookController } from "./controllers/Book/DeleteController";
 import { GetAllBooksController } from "./controllers/Book/GetAllController";
+import { GetOneBookController } from "./controllers/Book/GetOneController";
 import { UpdateBookController } from "./controllers/Book/UpdateController";
 import { CreateCategoryController } from "./controllers/Category/CreateController";
 import { DeleteCategoryController } from "./controllers/Category/DeleteController";
@@ -23,7 +24,7 @@ routes.put('/categories/:id', auth, new UpdateCategoryController().handle);
 
 routes.post('/books', auth, new CreateBookController().handle);
 routes.get('/books', new GetAllBooksController().handle);
-routes.get('/books/:id', new GetAllBooksController().handle);
+routes.get('/books/:id', new GetOneBookController().handle);
 routes.delete('/books/:id', auth, new DeleteBookController().handle);
 routes.put('/books/:id', auth, new UpdateBookController().handle);
 
