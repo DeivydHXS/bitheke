@@ -8,7 +8,7 @@ export async function addBook(title: string, description: string, category: stri
         {title, description, category_id: category, shelf, price},
         {headers: {
             "Content-Type": "application/json",
-            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc3ZDMxMWM0LWE0OTQtNDk4Mi1iN2NjLTcwMTJiMWE0ZDFjZSIsImlhdCI6MTY0NzIyMDI3MiwiZXhwIjoxNjQ3MzA2NjcyfQ.jMPnjdhhmsDXtE-5YOD6Q8ilb6n6kHp1Q08hn6KS4ws"
+            "authorization": "Bearer token"
         }}
     );
 
